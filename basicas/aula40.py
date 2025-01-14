@@ -35,7 +35,8 @@ while True:
 
     if operador == '+':
         print(f'{num_1_float}+{num_2_float} =', num_1_float + num_2_float)
-        print(f'{num_1_float}-{num_2_float} =', num_1_float - num_2_float)
+    elif operador == '-':
+        print(f'{num_1_float}/{num_2_float} =', num_1_float / num_2_float)
     elif operador == '/':
         print(f'{num_1_float}/{num_2_float} =', num_1_float / num_2_float)
     elif operador == '*':
