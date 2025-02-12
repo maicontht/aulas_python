@@ -5,7 +5,7 @@ multiplicando cada um dos valores por um a
 contagem regressiva começando de 10
 
 Ex.: 746.824.890-70 (746824890)  
-   10  9  8  7  6  5  4  3  2
+   10  9  8  7  6  5  43  2  
    7   4  6  8  2  4  8  9  0
 
 Somar todos os resultados:
