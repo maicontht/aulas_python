@@ -27,4 +27,4 @@ novos_produtos = [
 ]
 
 # print(novos_produtos)
-print(*novos_produtos, sep='\n')
+print(novos_produtos, sep='\n')
