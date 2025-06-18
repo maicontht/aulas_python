@@ -69,6 +69,7 @@ while True:
             print('Índice não existe na lista')
         except Exception:
             print('Erro desconhecido')
+        
     elif opcao == 'l':
         os.system('cls')
 
