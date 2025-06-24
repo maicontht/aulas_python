@@ -1,4 +1,3 @@
-# filter é um filtro funcional
 def print_iter(iterator):
     print(*list(iterator), sep='\n')
     print()
