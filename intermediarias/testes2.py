@@ -1,6 +1,8 @@
-def soma(a, b, c):
-    return a + b + c
+caminho_arquivo = 'aula116.txt'
 
-valores = [1, 2, 3]
-resultado = soma(*valores)
-print(resultado)  # Saída: 6
+
+v1 = 'Ola mundo cruel'
+with open(caminho_arquivo, 'w') as arquivo:
+    print('Olá mundo')
+    print('Arquivo vai ser fechado')
+    arquivo.write(v1)
