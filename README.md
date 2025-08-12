@@ -1,1 +1,1 @@
-Aqui está todas as aulas do Curso que esotu fazendo.
+Aqui está todas as aulas do Curso que estou fazendo.
