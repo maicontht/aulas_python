@@ -13,7 +13,6 @@
 #       declarado.
 from functools import partial
 
-
 class Foo:
     def __init__(self):
         self.public = 'isso é público'
