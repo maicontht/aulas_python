@@ -53,20 +53,9 @@ class Conta(ABC):
         self.saldo = None
         self.deposito = None
 
-    @property
     @abstractmethod
-    def deposito(self):
-        return self.saldo
-    
-    @deposito.setter
-    def deposito(self, valor_depositado):
-        if valor_depositado <= 0:
-            print('Valor tem que ser mais que zero')
-        else:
-            self.deposito += self.deposito
-
-
-
+    def depositar(self, valor):
+        pass
 
 
 class ContaPoupanca(Conta):
@@ -77,15 +66,9 @@ class ContaPoupanca(Conta):
         self.limite_saque = 1000
         self.deposito = None
 
-        def deposito(self):
-            return self.saldo
+    def depositar(self, valor):
+        pass
     
-        @deposito.setter
-        def deposito(self, valor_depositado):
-            if valor_depositado <= 0:
-                print('Valor tem que ser mais que zero')
-            else:
-                self.deposito += self.deposito
     
 
 class ContaCorrente(Conta):
@@ -96,16 +79,8 @@ class ContaCorrente(Conta):
         self.limite_saque = 1500
         self.deposito = None
 
-        
-        def deposito(self):
-            return self.saldo
-    
-        @deposito.setter
-        def deposito(self, valor_depositado):
-            if valor_depositado <= 0:
-                print('Valor tem que ser mais que zero')
-            else:
-                self.deposito += self.deposito
+    def depositar(self, valor):
+        pass    
         
 
 class Pessoa(ABC):
@@ -125,10 +100,7 @@ class Pessoa(ABC):
 class Cliente(Pessoa):
     ...
 
-p1 = Pessoa('maicon', 25)
-
+p1 = Cliente('João', 30)
 bradesco = Banco('Bradesco')
-itau = Banco('Itau')
-
-
-
+conta1 = ContaCorrente(1234, 56789-0, 1000)
+print(conta1.saldo)
