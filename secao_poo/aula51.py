@@ -47,11 +47,10 @@ class Banco:
         self.contas = []
 
 class Conta(ABC):
-    def __init__(self,agencia):
+    def __init__(self,agencia, conta, ):
         self.agencia = agencia
-        self.conta = None
+        self.conta = conta
         self.saldo = None
-        self.deposito = None
 
     @abstractmethod
     def depositar(self, valor):
@@ -59,28 +58,32 @@ class Conta(ABC):
 
 
 class ContaPoupanca(Conta):
-    def __init__(self, agencia, conta, saldo):
+    def __init__(self, agencia, conta):
         self.agencia = agencia
         self.conta = conta
-        self.saldo = saldo
+        self.saldo = 0
         self.limite_saque = 1000
-        self.deposito = None
 
     def depositar(self, valor):
-        pass
-    
-    
+        if valor < 0:
+            print('Nao é possivel depositar 0 reais.')
+        else:
+            self.saldo += valor
+         
 
 class ContaCorrente(Conta):
-    def __init__(self, agencia, conta, saldo):
+    def __init__(self, agencia, conta):
         self.agencia = agencia
         self.conta = conta
-        self.saldo = saldo
+        self.saldo = 0
         self.limite_saque = 1500
-        self.deposito = None
 
     def depositar(self, valor):
-        pass    
+        if valor < 0:
+            print('Nao é possivel depositar 0 reais.')
+        else:
+            self.saldo += valor
+          
         
 
 class Pessoa(ABC):
@@ -100,7 +103,6 @@ class Pessoa(ABC):
 class Cliente(Pessoa):
     ...
 
-p1 = Cliente('João', 30)
-bradesco = Banco('Bradesco')
-conta1 = ContaCorrente(1234, 56789-0, 1000)
-print(conta1.saldo)
+p1 = ContaCorrente(123, 0)
+p1.depositar(123)
+p2 = Conta(123, 'penis')
