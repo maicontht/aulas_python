@@ -105,4 +105,3 @@ class Cliente(Pessoa):
 
 p1 = ContaCorrente(123, 0)
 p1.depositar(123)
-p2 = Conta(123, 'penis')
