@@ -10,7 +10,7 @@
 
 #My resolution :)
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 value = 1000000
