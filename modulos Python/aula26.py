@@ -24,7 +24,7 @@ smtp_username = os.getenv('FROM_EMAIL', '')
 smtp_password = os.getenv('EMAIL_PASSWORD', '')
 
 # Mensagem de texto
-with open(CAMINHO_HTML, 'r') as arquivo:
+with open(CAMINHO_HTML, 'r', encoding='utf-8') as arquivo:
     texto_arquivo = arquivo.read()
     template = Template(texto_arquivo)
     texto_email = template.substitute(nome='Helena')
